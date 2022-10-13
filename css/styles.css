@@ -1,0 +1,38 @@
+
+/* MOBILE SETTINGS -------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+	
+	body{
+		/* width: 100%; */
+		/* height: auto; */
+	} 
+
+	.directions{		
+		top: 25%;
+		left: 7%;
+		width: 20em;
+		padding: 20px 10px;
+	}
+
+	.game-box{
+		text-align: center;
+		
+	}
+	.services-about{
+		display: inline-block;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		margin: 20px 0px;
+		color: var(--palatinate-purple);
+
+	}
+
+	h3{
+		margin-top: 100px;
+	}
+	footer{
+		margin: 30px 0px;
+		padding-top: 60px;
+	}
+}
