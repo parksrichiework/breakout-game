@@ -7,6 +7,8 @@ const boardHeight= 300
 const ballDiameter = 20
 const moveLeft= document.querySelector('.left')
 const moveRight= document.querySelector('.right')
+const playAgain= document.querySelector('.play-again')
+
 let xDirection = -2
 let yDirection = 2
 let score = 0
@@ -103,11 +105,12 @@ document.addEventListener('mousedown', moveBar)
 
 function moveBar(e){
     if(e.target == moveLeft && currentPosition[0] > 0){
-        currentPosition[0] -= 10
-        setTimeout(drawUser(), 100)
+        currentPosition[0] -= 20
+        drawUser()
+        
     }
     if(e.target == moveRight && currentPosition[0] < boardWidth - blockWidth){
-        currentPosition[0] += 10
+        currentPosition[0] += 20
         drawUser()
     }
 }
@@ -142,7 +145,7 @@ function moveBall(){
 
 // START THE GAME WIHT THIS FUNCTION
 function startGame(){
-timerId = setInterval(moveBall, 30) //CHANGE THIS NUMBER TO MAKE BALL MOVE FASTER
+timerId = setInterval(moveBall, 25) //CHANGE THIS NUMBER TO MAKE BALL MOVE FASTER
 }
 
 // check for collisions ----------------------------------------------
@@ -159,12 +162,13 @@ function checkForCollisions(){
             score++
             scoreDisplay.innerHTML = score
 
-            // check for win --------------------------------------
+            // check for WIN --------------------------------------
             if(blocks.length === 0){
                 scoreDisplay.innerHTML = 'You win!'
                 clearInterval(timerId)
                 document.removeEventListener('keydown', moveUser)
                 ball.style.backgroundColor= 'var(--lime-green)'
+                playAgain.style.display= 'flex'
             }
 
         }

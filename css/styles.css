@@ -42,6 +42,7 @@ main{
 .grid-box{
     display: flex;
     justify-content: center;
+    
 }
 
 .block{
@@ -158,6 +159,32 @@ main{
     justify-content: space-between;
 }
 
+.play-again{
+    display: flex;
+    z-index: 5;
+    position: absolute;
+    /* display:flex; */
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+    height: 150px;
+}
+
+.play-again a:hover{
+    cursor: pointer;
+}
+
+.play-again a{
+    background-color: var(--celadon-blue);
+    border: solid 2px var(--celadon-blue);
+    padding: 0px 100px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+    font-family: ;
+}
+
 .footer{
     margin-top: 50px;
 }
@@ -180,6 +207,16 @@ main{
 		padding: 20px 10px;
 	}
 
+    .grid{
+        position: absolute;
+        
+        border: solid 2px var(--celadon-blue);
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        
+    }
+
 	.game-box{
 		text-align: center;
 		
@@ -193,6 +230,15 @@ main{
 		color: var(--palatinate-purple);
 
 	}
+    
+    .move-buttons{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-top: 400px;
+        width: 300px;
+        
+    }
 
 	h3{
 		margin-top: 100px;
