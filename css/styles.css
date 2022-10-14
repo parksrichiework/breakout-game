@@ -160,7 +160,7 @@ main{
 }
 
 .play-again{
-    display: flex;
+    display: none;
     z-index: 5;
     position: absolute;
     /* display:flex; */
@@ -182,7 +182,7 @@ main{
     transition: 0.3s ease-in-out;
     color: white;
     text-decoration: none;
-    font-family: ;
+    font-family: Bak ;
 }
 
 .footer{
@@ -208,14 +208,11 @@ main{
 	}
 
     .grid{
-        position: absolute;
-        
-        border: solid 2px var(--celadon-blue);
-        margin-top: 40px;
-        display: flex;
-        justify-content: center;
+        width: 100vw;        
+       
         
     }
+   
 
 	.game-box{
 		text-align: center;
@@ -240,11 +237,19 @@ main{
         
     }
 
-	h3{
-		margin-top: 100px;
-	}
-	footer{
-		margin: 30px 0px;
-		padding-top: 60px;
-	}
-}
+    .play-again{
+        width:350px;
+        justify-content: space-evenly;
+    }
+
+    .play-again a{
+        padding: 0 50px;
+
+        h3{
+            margin-top: 100px;
+        }
+        footer{
+            margin: 30px 0px;
+            padding-top: 60px;
+        }
+    }

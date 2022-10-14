@@ -105,12 +105,12 @@ document.addEventListener('mousedown', moveBar)
 
 function moveBar(e){
     if(e.target == moveLeft && currentPosition[0] > 0){
-        currentPosition[0] -= 20
+        currentPosition[0] -= 30
         drawUser()
         
     }
     if(e.target == moveRight && currentPosition[0] < boardWidth - blockWidth){
-        currentPosition[0] += 20
+        currentPosition[0] += 30
         drawUser()
     }
 }
